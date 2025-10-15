@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAX Logistics - Cek Resi / Track Your Shipment</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>MAX Logistics</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#tracking" class="nav-link active">Cek Resi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Track Your Shipment</h1>
+                <p>Monitor your cargo in real-time with our advanced tracking system</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tracking Section -->
+    <section class="tracking-section" id="tracking">
+        <div class="container">
+            <div class="tracking-container">
+                <div class="tracking-header">
+                    <h2><i class="fas fa-search"></i> Cek Resi / Track Your Shipment</h2>
+                    <p>Enter your tracking number to get real-time updates on your shipment status</p>
+                </div>
+
+                <div class="tracking-form-container">
+                    <form class="tracking-form" id="trackingForm">
+                        <div class="form-group">
+                            <label for="trackingNumber">Tracking Number</label>
+                            <div class="input-group">
+                                <input type="text" id="trackingNumber" name="trackingNumber" 
+                                       placeholder="Enter your tracking number" required>
+                                <button type="submit" class="track-btn">
+                                    <i class="fas fa-search"></i> Track
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Tracking Results -->
+                <div class="tracking-results" id="trackingResults" style="display: none;">
+                    <div class="results-header">
+                        <h3>Tracking Information</h3>
+                        <div class="tracking-number-display">
+                            <span>Tracking Number: </span>
+                            <strong id="displayTrackingNumber"></strong>
+                        </div>
+                    </div>
+
+                    <div class="status-card">
+                        <div class="status-info">
+                            <div class="status-badge" id="statusBadge">
+                                <i class="fas fa-truck"></i>
+                                <span id="statusText">In Transit</span>
+                            </div>
+                            <div class="status-details">
+                                <p><strong>Current Status:</strong> <span id="currentStatus">Package is in transit</span></p>
+                                <p><strong>Last Updated:</strong> <span id="lastUpdated">2024-01-15 14:30</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline">
+                        <h4>Shipment Timeline</h4>
+                        <div class="timeline-container" id="timelineContainer">
+                            <!-- Timeline items will be populated by JavaScript -->
+                        </div>
+                    </div>
+
+                    <div class="shipment-details">
+                        <h4>Shipment Details</h4>
+                        <div class="details-grid">
+                            <div class="detail-item">
+                                <label>Origin:</label>
+                                <span id="origin">Jakarta, Indonesia</span>
+                            </div>
+                            <div class="detail-item">
+                                <label>Destination:</label>
+                                <span id="destination">Surabaya, Indonesia</span>
+                            </div>
+                            <div class="detail-item">
+                                <label>Estimated Delivery:</label>
+                                <span id="estimatedDelivery">2024-01-18</span>
+                            </div>
+                            <div class="detail-item">
+                                <label>Weight:</label>
+                                <span id="weight">2.5 kg</span>
+                            </div>
+                            <div class="detail-item">
+                                <label>Service Type:</label>
+                                <span id="serviceType">Express Delivery</span>
+                            </div>
+                            <div class="detail-item">
+                                <label>Carrier:</label>
+                                <span id="carrier">MAX Logistics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- No Results Message -->
+                <div class="no-results" id="noResults" style="display: none;">
+                    <div class="no-results-content">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h3>No Results Found</h3>
+                        <p>We couldn't find any information for the tracking number you entered.</p>
+                        <p>Please check your tracking number and try again, or contact our customer service for assistance.</p>
+                        <div class="contact-info">
+                            <p><strong>Customer Service:</strong> +62-812-1202-2641</p>
+                            <p><strong>Email:</strong> info@maxlog-id.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2>Why Choose Our Tracking System</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Real-time Updates</h3>
+                    <p>Get instant notifications about your shipment status</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Safe & Secure</h3>
+                    <p>Your cargo is handled by our professional team</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Mobile Friendly</h3>
+                    <p>Track your shipments on any device, anywhere</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Our customer service is ready to help you anytime</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MAX Logistics</h3>
+                    <p>We provide innovative Logistics Solutions maintaining fast, responsive, timely, efficient and competitive price logistics distribution.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Ruko Gading Bukit Indah Blok G25 A/B, Jakarta Utara 14240</p>
+                    <p><i class="fas fa-phone"></i> +62-812-1202-2641</p>
+                    <p><i class="fas fa-envelope"></i> info@maxlog-id.com</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li>Sea & Air Freight</li>
+                        <li>Customs Brokerage</li>
+                        <li>Warehousing Management</li>
+                        <li>Project Cargo</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PT. MAX Logistics Indonesia. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
