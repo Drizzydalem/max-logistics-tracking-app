@@ -209,19 +209,3 @@ define('DEBUG_MODE', true);
 ```
 
 This will log errors to the PHP error log.
-
-## License
-
-This project is created for MAX Logistics Indonesia. All rights reserved.
-
-## Support
-
-For technical support or questions:
-- Email: info@maxlog-id.com
-- Phone: +62-812-1202-2641
-
----
-
-**MAX Logistics Indonesia**  
-Ruko Gading Bukit Indah Blok G25 A/B  
-Kelapa Gading Barat, Kec Gading, Jakarta Utara 14240
