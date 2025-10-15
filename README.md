@@ -1,6 +1,6 @@
 # MAX Logistics Tracking System
 
-A complete web-based shipment tracking system built with HTML, CSS, JavaScript, PHP, and MySQL. This system allows users to track their shipments in real-time with a professional interface that matches MAX Logistics branding.
+Trying to create a complete web-based shipment tracking system built with HTML, CSS, JavaScript, PHP, and MySQL. This system allows users to track their shipments in real-time with a professional interface that matches MAX Logistics branding.
 
 ## Features
 
@@ -34,7 +34,7 @@ A complete web-based shipment tracking system built with HTML, CSS, JavaScript, 
 
 1. **Clone or Download the Project**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/Drizzydalem/max-logistics-tracking-app.git
    # or download and extract the ZIP file
    ```
 
